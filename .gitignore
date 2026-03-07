@@ -1,0 +1,13 @@
+# Ignore everything else in .vscode
+.vscode/*
+# But Commit workspace settings
+!.vscode/settings.json
+
+# Ignore build artifacts
+build/
+# But keep the PDF files in the build directory
+!build/*.pdf
+
+# Ignore all output files
+output/
+.DS_Store

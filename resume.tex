@@ -1,0 +1,139 @@
+% ============================================================
+%  resume.tex  (YAML edition — all improvements)
+%
+%  WORKFLOW:
+%    1. Edit  input/resume.yml
+%    2. python3 parse_yml.py [--build]
+%    3. pdflatex resume.tex
+% ============================================================
+\documentclass[letterpaper,11pt]{article}
+
+% ── Packages ─────────────────────────────────────────────────
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{ifthen}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\input{glyphtounicode}
+
+% ── Page style ───────────────────────────────────────────────
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+\setlength{\footskip}{4.08pt}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% ── Section formatting ───────────────────────────────────────
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+% ── Resume commands ──────────────────────────────────────────
+\newcommand{\resumeItem}[1]{
+  \item\small{{#1 \vspace{-2pt}}}
+}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+% Helper: render #2 only when #1 is non-empty
+\newcommand{\ifval}[2]{\ifthenelse{\equal{#1}{}}{}{#2}}
+
+% ── Load generated personal macros ───────────────────────────
+\input{output/basics_data}
+
+% ── PDF metadata (ATS) ───────────────────────────────────────
+\hypersetup{
+  pdftitle   = {\resumeName{} -- Resume},
+  pdfauthor  = {\resumeName},
+  pdfsubject = {Resume},
+  pdfkeywords= {resume, cv}
+}
+
+% ============================================================
+\begin{document}
+% ── HEADING ──────────────────────────────────────────────────
+\begin{center}
+
+  % Optional photo
+  \ifval{\resumeImage}{%
+    \includegraphics[width=0.8in,height=0.8in,keepaspectratio]{\resumeImage}%
+    \par\vspace{4pt}%
+  }
+
+  % Name (always)
+  {\textbf{\Huge \scshape \resumeName}}
+
+  % Optional label on its own line
+  \ifval{\resumeLabel}{\par\vspace{2pt}{\large\textit{\resumeLabel}}}
+
+  \par\vspace{4pt}
+  \small
+
+  % Build contact line using a minipage to avoid spurious \\ issues
+  \newcommand{\sep}{ $|$ }
+  \ifval{\resumePhone}{\resumePhone}%
+  \ifval{\resumePhone}{\ifval{\resumeEmail}{\sep}}%
+  \ifval{\resumeEmail}{\href{mailto:\resumeEmail}{\underline{\resumeEmail}}}%
+  \ifval{\resumeWebsite}{\sep\href{\resumeWebsite}{\underline{\resumeWebsite}}}%
+  \ifval{\resumeLocation}{\sep\resumeLocation}%
+  \ifval{\resumeLinkedInURL}{\sep\href{\resumeLinkedInURL}{\underline{\resumeLinkedInLabel}}}%
+  \ifval{\resumeGitHubURL}{\sep\href{\resumeGitHubURL}{\underline{\resumeGitHubLabel}}}%
+
+\end{center}
+
+% ── Summary — optional ───────────────────────────────────────
+\ifval{\resumeSummary}{%
+  \section{Summary}
+  \small\resumeSummary
+}
+
+% ── All sections (order from resume.yml) ─────────────────────
+\input{output/resume_sections}
+
+% ============================================================
+\end{document}

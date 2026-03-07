@@ -1,0 +1,151 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Ajay Singh Thakur",
+    "label": "Technical Leader - Mobile",
+    "email": "ajaysingh.thakur76@hotmail.com",
+    "phone": "8602727365",
+    "location": {
+      "city": "Pune",
+      "region": "Maharashtra"
+    },
+    "summary": "Experienced Mobile Engineer with 10+ years of expertise in designing and developing scalable apps for Apple platforms (iOS, watchOS, macOS, iPadOS) and Android applications. Proven leader in modernizing legacy codebases, implementing robust CI/CD pipelines, and delivering significant quality improvements. Adept at collaborating with cross-functional and distributed teams to drive product enhancements and achieve exceptional business outcomes. Proficient in Swift, Kotlin, SwiftUI, Jetpack Compose, and modern mobile development practices.",
+    "profiles": [
+      {
+        "username": "ajaysinghthakur",
+        "network": "LinkedIn",
+        "url": "https://www.linkedin.com/in/ajaysingh-thakur"
+      },
+      {
+        "network": "GitHub",
+        "url": "https://github.com/ajaysingh-thakur"
+      },
+      {
+        "network": "Medium",
+        "url": "https://medium.com/@ajaysingh-thakur"
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Programming Languages",
+      "keywords": ["Swift", "Objective-C", "Kotlin", "Python", "Shell Scripting"]
+    },
+    {
+      "name": "Frameworks & Tools",
+      "keywords": [
+        "SwiftUI", "Combine", "UIKit", "AppKit", "Jetpack Compose",
+        "AVFoundation", "CoreLocation", "Cocoa", "Cocoa Touch"
+      ]
+    },
+    {
+      "name": "Design Patterns",
+      "keywords": ["MVC", "MVVM", "Factory", "Singleton"]
+    },
+    {
+      "name": "CI/CD",
+      "keywords": ["GitHub Actions", "GitLab CI", "Fastlane"]
+    },
+    {
+      "name": "Static Analysis & Code Quality",
+      "keywords": ["SwiftLint", "Periphery", "SonarCube"]
+    },
+    {
+      "name": "Other Technologies",
+      "keywords": ["Firebase", "Core Data", "Core Animation", "Git", "Gradle"]
+    },
+    {
+      "name": "Project Management & Agile",
+      "keywords": ["Azure DevOps", "Jira", "Scrum", "Kanban"]
+    }
+  ],
+  "work": [
+    {
+      "name": "KPIT Technologies",
+      "position": "Technical Leader",
+      "startDate": "2023-03",
+      "location": "Pune, India",
+      "summary": "Led mobile engineering team on Suzuki Ride Connect and My Triumph projects.",
+      "highlights": [
+        "Led a team of 6 mobile engineers to modernize a legacy codebase by re-architecting a flawed MVVM implementation where views were misused as view model classes.",
+        "Introduced SwiftLint incrementally alongside Periphery to eliminate dead code.",
+        "Implemented agile practices including daily stand-ups, sprint planning, and retrospectives, enhancing team collaboration and accelerating release cycles.",
+        "Trained and mentored two interns who were subsequently retained as full-time software engineers.",
+        "Drove improvements in app quality, increasing the CSAT rating from 2.75 to 4.7.",
+        "Established streamlined CI/CD pipelines for both the iOS app and XCFramework, with frameworks stored on a Nexus Repository.",
+        "Collaborated with designers and project managers to propose and implement client change requests that enhanced product quality.",
+        "Developed Turn-by-Turn Navigation and built an XCFramework for an IP Navigation engine."
+      ]
+    },
+    {
+      "name": "CloudMoyo India Pvt. Ltd",
+      "position": "Senior Software Analyst",
+      "startDate": "2021-10",
+      "endDate": "2023-03",
+      "location": "Pune, India",
+      "summary": "Worked on Viddl App and Viddl WebApp — a TikTok-like video creation and consumption platform.",
+      "highlights": [
+        "Developed robust video creation and consumption modules enabling users to stitch multiple videos together into cohesive content.",
+        "Contributed to both iOS and Android applications; initially focused on stabilizing the iOS app and later extended efforts to the Android platform.",
+        "Collaborated with a globally distributed team with key members based in the US and Romania to ensure seamless cross-functional communication.",
+        "Integrated Microsoft Authentication and implemented features such as pagination and LRU caching to optimize performance."
+      ]
+    },
+    {
+      "name": "Innodeed Systems Pvt. Ltd",
+      "position": "Software Engineer",
+      "startDate": "2019-03",
+      "endDate": "2021-10",
+      "location": "Bhilai, India",
+      "summary": "Worked on Cut Paste Photos, Read4Me, Music Editor, and the Dexati Ecosystem.",
+      "highlights": [
+        "Developed image segmentation features, custom image effects, and implemented in-app purchases.",
+        "Created a custom reader mode using WKWebView for the Read4Me project.",
+        "Contributed to projects for Dexati, supporting an ecosystem with over 925 million downloads across apps."
+      ]
+    },
+    {
+      "name": "TechPhant Consulting Group",
+      "position": "Sr Technical Associate",
+      "startDate": "2017-12",
+      "endDate": "2019-02",
+      "location": "Raipur, India",
+      "summary": "Led engineering team on HWW iOS/Android app and Salmon Journey Game.",
+      "highlights": [
+        "Led a 5-member engineering team.",
+        "Built the HWW app in React Native.",
+        "Developed Salmon Journey game using HTML5 and Pixi.js."
+      ]
+    },
+    {
+      "name": "TechPhant Consulting Group",
+      "position": "Technical Associate",
+      "startDate": "2014-05",
+      "endDate": "2017-03",
+      "location": "Raipur, India",
+      "summary": "Part of mobile engineering team working on MM2 View iOS app and SG-Movie iOS app.",
+      "highlights": [
+        "Part of a 2-member mobile engineering team.",
+        "Contributed to the MM2 View app.",
+        "Developed the SG-Movie app for the Singapore region."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "MATS University",
+      "area": "Computer Science",
+      "studyType": "M.Tech",
+      "endDate": "2019",
+      "location": "Raipur, India"
+    },
+    {
+      "institution": "CSVTU",
+      "area": "Electronics & Telecommunication",
+      "studyType": "B.E",
+      "startDate": "2008",
+      "endDate": "2012",
+      "location": "Raipur, India"
+    }
+  ]
+}
