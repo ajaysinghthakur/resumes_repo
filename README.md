@@ -322,57 +322,6 @@ input/resume.json
 `resume.tex` loads `output/basics_data` for heading macros (`\resumeName`, `\resumeEmail`, etc.) and `output/resume_sections` for the complete body — one `\input` line covers every section regardless of how many exist.
 
 ---
-
-## 🔧 Updating Your Resume
-
-| What changed | What to do |
-|---|---|
-| Any content | Edit `input/resume.json` |
-| Add a new section | Add a new top-level key in the JSON |
-| Remove a section | Delete that key from the JSON |
-| Reorder sections | Reorder the top-level keys |
-| Rename a section heading | Add `"meta": { "section_titles": { "work": "Work History" } }` |
-| Layout / typography | Edit `resume.tex` |
-
-After any change to `resume.json`:
-
-```bash
-python3 parse_json.py --build
-```
-
----
-
-## 🌐 JSONResume Ecosystem Compatibility
-
-Because `resume.json` is a valid [JSONResume v1.0.0](https://jsonresume.org/schema) document you can use it directly with the wider ecosystem:
-
-| Tool | How |
-|---|---|
-| **Official CLI** | `npm install -g resume-cli` → `resume serve` |
-| **Schema validator** | Paste at [jsonschemavalidator.net](https://www.jsonschemavalidator.net/) |
-| **30+ themes** | Drop into any JSONResume-compatible theme renderer |
-| **Registry hosting** | Publish at `registry.jsonresume.org/<username>` |
-| **ATS systems** | `$schema` field + single-column layout = parseable |
-
----
-
-## 📄 Optional Fields Summary
-
-| Field | Required | Notes |
-|---|---|---|
-| `basics.name` | ✅ Recommended | Shown in heading |
-| `basics.email` | ✅ Recommended | Shown in heading |
-| `basics.label` | Optional | Job title under name |
-| `basics.image` | Optional | Photo; omit or leave `""` to hide |
-| `basics.phone` | Optional | Omit to hide from heading |
-| `basics.url` | Optional | Personal website |
-| `basics.summary` | Optional | Renders as Summary section |
-| `basics.location` | Optional | City, region shown in heading |
-| `basics.profiles` | Optional | Any number of social networks |
-| All other sections | Optional | Remove the key entirely to omit |
-
----
-
 ## 📄 License
 
 LaTeX template based on **Jake's Resume** by [Jake Gutierrez](https://github.com/jakegut) — MIT License.  
