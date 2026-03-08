@@ -22,6 +22,7 @@
 \usepackage{ifthen}
 \usepackage{graphicx}
 \usepackage[hidelinks]{hyperref}
+\usepackage{fontawesome5}
 \input{glyphtounicode}
 
 % ── Page style ───────────────────────────────────────────────
@@ -106,7 +107,8 @@
   }
 
   % Name (always)
-  {\textbf{\Huge \scshape \resumeName}}
+  % {\textbf{\Huge \scshape \resumeName}}
+  {\textbf{\Huge \resumeName}}
 
   % Optional label on its own line
   \ifval{\resumeLabel}{\par\vspace{2pt}{\large\textit{\resumeLabel}}}
